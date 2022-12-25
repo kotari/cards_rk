@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "cards-rk"
+  site-url: "https://kotari.github.io/cards_rk"
+  description: "Testing nbdev and using provided card example"
+  repo-branch: main
+  repo-url: "https://github.com/kotari/cards_rk"
