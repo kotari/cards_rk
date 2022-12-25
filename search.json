@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "cards_rk",
+    "section": "",
+    "text": "A deck of cards demo nbdev"
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "cards_rk",
+    "section": "Install",
+    "text": "Install\npip install cards-rk"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "cards_rk",
+    "section": "How to use",
+    "text": "How to use\nThis lib provides a card class which you can use to create, display and compare playing cards\n\nCard(2,6)\n\n6♠\n\n\n\nCard(1,6)\n\n6♡\n\n\n\nsuits\n\n['♣', '♡', '♠', '♢']"
+  },
+  {
+    "objectID": "cards.html",
+    "href": "cards.html",
+    "title": "card – A basic playing card",
+    "section": "",
+    "text": "We will be using numbers to represent playing card clubs and ranks. These are the ranks\nThese are the ranks\nFor instance the rank at index 1 (Note that there isn’t a playing card at position 0, since we want the ranks to match the indicies where possible)\nsource"
+  },
+  {
+    "objectID": "cards.html#comparison-operator",
+    "href": "cards.html#comparison-operator",
+    "title": "card – A basic playing card",
+    "section": "Comparison operator",
+    "text": "Comparison operator\nEquality, less than and greater than work on the rank and suit indicies\nHere is a test for equality\n\ntest_eq(Card(suit=1, rank=6), Card(suit=1, rank=6))\n\ntest for < ..\n\nassert Card(suit=1, rank=6) < Card(suit=2, rank=2)\n\ntest for > ..\n\nassert Card(suit=3, rank=10) > Card(suit=2, rank=11)"
+  },
+  {
+    "objectID": "deck.html",
+    "href": "deck.html",
+    "title": "Deck",
+    "section": "",
+    "text": "source\n\nDeck\n\n Deck ()\n\nA deck of cards, not including jokers\nWhen we initially create a deck, all of the cards will be present\n\ndeck = Deck()\ndeck\n\nA♣; 2♣; 3♣; 4♣; 5♣; 6♣; 7♣; 8♣; 9♣; 10♣; J♣; Q♣; K♣; A♡; 2♡; 3♡; 4♡; 5♡; 6♡; 7♡; 8♡; 9♡; 10♡; J♡; Q♡; K♡; A♠; 2♠; 3♠; 4♠; 5♠; 6♠; 7♠; 8♠; 9♠; 10♠; J♠; Q♠; K♠; A♢; 2♢; 3♢; 4♢; 5♢; 6♢; 7♢; 8♢; 9♢; 10♢; J♢; Q♢; K♢\n\n\nThat should be 52 cards\n\ntest_eq(len(deck), 52)\n\nAs a reminder these are the suits we definded for a Card\n\nsuits\n\n['♣', '♡', '♠', '♢']\n\n\nThese are the ranks\n\nranks\n\n[None, 'A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K']\n\n\n\nCard(0, 1) in deck\n\nTrue\n\n\n\nsource\n\n\nDeck.pop\n\n Deck.pop (idx:int=-1)\n\nRemove one card from the deck\n\n\n\n\n\n\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nidx\nint\n-1\nThe index of the card to remove, defaulting to the last one\n\n\n\n\ndeck = Deck()\ntest_eq(deck.pop(), Card(3,13))\n\n\nsource\n\n\nDeck.remove\n\n Deck.remove (card:cards_rk.card.Card)\n\nRemovesCard from the deck or raises exception if it is not there\n\ncard23 = Card(2, 3)\ndeck = Deck()\ndeck.remove(card23)\n\nassert card23 not in deck\n\n\nsource\n\n\ndraw_n\n\n draw_n (n:int, replace:bool=True)\n\nDrawn n cards, with replacement if replace\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nn\nint\n\nnumber of cards to draw\n\n\nreplace\nbool\nTrue\nWhether or not draw with replacement\n\n\n\n\ndraw_n(13, replace=False)\n\n[J♣, 2♣, 2♠, 5♢, K♢, J♢, 6♡, A♠, 5♡, 8♠, Q♠, 5♣, A♣]"
+  }
+]

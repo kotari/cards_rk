@@ -1,0 +1,1 @@
+Sitemap: https://kotari.github.io/cards_rk/sitemap.xml
